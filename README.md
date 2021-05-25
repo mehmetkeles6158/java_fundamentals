@@ -1,4 +1,4 @@
-# CodingNomads Java Fundamentals - Mehmet's Edit #3 (branch)
+# CodingNomads Java Fundamentals - Mehmet's Edit #3 (new_edition-change))
 
 Hello.This project contains a variety of textbook examples and labs focused on Java labs_examples.fundamentals.
 
