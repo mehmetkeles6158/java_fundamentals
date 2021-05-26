@@ -13,7 +13,7 @@ public class Exercise_05 {
 
     public static void main(String[] args) {
 
-        String str = "hello!";
+        String str = "hello world!";
         // please declare an int variable below, and set it to the value of the length of "str"
 
         int length = str.length();
