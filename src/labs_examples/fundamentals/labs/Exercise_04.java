@@ -24,11 +24,11 @@ public class Exercise_04 {
 
         boolean besiktasWins = true;
 
-        System.out.println("besiktas always wins: " + besiktasWins);
+        System.out.println("Besiktas always win? Answer: " + besiktasWins);
 
         char letter ='A' ;
 
-        System.out.println("letter = " +letter);
+        System.out.println("letter = " + letter);
 
         byte X = 123;
 
@@ -44,7 +44,7 @@ public class Exercise_04 {
 
         float M = 123.567f;
 
-        System.out.println("M :" +M);
+        System.out.println("M :" + M);
 
         double N = 11111111.2233;
 
