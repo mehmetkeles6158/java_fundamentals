@@ -21,10 +21,12 @@ public class Exercise_01 {
         int firstVal = 12;
         double secondVal = 12345.67;
         float thirdVal = 456.67f;
+        char letter = 'm';
 
         System.out.println("First Value is " + firstVal);
         System.out.println("Second Values is " + secondVal);
         System.out.println("Third Value is " + thirdVal);
+        System.out.println("My Letter is " + letter);
 
     }
 }

@@ -25,20 +25,20 @@ class RelationalOperators {
 
         int k = 21;
         int l = 21;
-        if (k >= n) {
+        if (k >= l) {
             System.out.println("k is greater than or equal to l");
         }
 
         int d = 13;
         int e = 15;
-        if (k <= n) {
-            System.out.println("m is less than or equal to e");
+        if (d <= e) {
+            System.out.println("d is less than or equal to e");
         }
 
         int x = 10;
         int y = 10;
         if (x == y) {
-            System.out.println("k is equal to z");
+            System.out.println("x is equal to y");
         }
 
     }
