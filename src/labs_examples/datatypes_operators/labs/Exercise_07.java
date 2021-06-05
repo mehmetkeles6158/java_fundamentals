@@ -16,16 +16,17 @@ public class Exercise_07 {
     public static void main(String[] args) {
 
         // create scanner
-        Scanner scanner = new Scanner(System.in);
+        Scanner scannerKeyboard = new Scanner(System.in);
         // prompt user
         System.out.println("Enter a number in days between 1 and 1,000,000: ");
         // assign input to variable as int
-        int days = scanner.nextInt();
+        int days = scannerKeyboard.nextInt();
 
         // write completed code here
         int sec = days * 24 * 60 * 60;
 
-        System.out.println(sec);
+            System.out.println(sec);
+            
 
     }
 }

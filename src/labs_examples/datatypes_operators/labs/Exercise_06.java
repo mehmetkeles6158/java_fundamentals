@@ -26,11 +26,30 @@ public class Exercise_06 {
         System.out.println(castAnswer);
 
         // Surface Area of The Cylinder
-        double surfaceArea = 2 * pi * r * h;
+        double surfaceArea = 2 * Math.PI * r * h;
         System.out.println(surfaceArea);
 
         //To round "final answer of surface area" to the nearest whole number!" I did this extra.:)
         System.out.println(Math.round(surfaceArea));
 
+        // working on flow
+
+
+        int i = 10;
+        if (i > 10) {
+            System.out.print("Lorem");
+            if (i > 10) {
+                System.out.print(" Ipsum");
+            } else if (i > 5) {
+                System.out.print(" Dolor");
+            }
+            System.out.print(" Sit");
+            if (i >= 10) {
+                System.out.print(" Amet");
+            }
+            System.out.print(" Consectetur");
+        }
     }
+
+
 }
