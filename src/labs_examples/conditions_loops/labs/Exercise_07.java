@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Exercise_07 {
     public static void main(String[] args) {
-        //// Didn't make too much progress. But  I tried a lot . :(
+        //// Didn't make too much progress. But  I tried a lot . :( still didn't get desirable outcome. Could you please help with that?
 
         // 1) I create a scanner first!
         Scanner words = new Scanner(System.in);

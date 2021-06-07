@@ -17,9 +17,32 @@ import java.util.Scanner;
 
 public class Exercise_05 {
     public static void main(String[] args) {
-        // Didn't make too much progress. But  I tried a lot . :(
+
+        Scanner user = new Scanner(System.in);
+
+        System.out.print("Enter lower bound:");
+        int lowerBound = user.nextInt();
+
+        System.out.print("Enter upper bound:");
+        int upperBound = user.nextInt();
+
+
+        int sum = 0;
+
+        for (int i = lowerBound; i <= upperBound; i++) {
+
+            sum += i;
+
+        }
+        System.out.println("Sum is " + sum);
 
     }
 
 
 }
+
+
+
+
+
+
