@@ -18,21 +18,22 @@ public class Exercise_03 {
 
     public static void main(String[] args) {
 
-        int[][] multiplyByThree = new int[5][5];
+        int[][] multipleOfThree = new int[5][5];
 
-        for (int i = 1; i < multiplyByThree.length; i++) {
-            for (int j = 1; j < multiplyByThree[i].length; j++) {
-                multiplyByThree[i][j] = i * j * 3;
-            }
-        }
+        int count = 3;
 
-        for (int[] vals : multiplyByThree) {
-            for (int i : vals) {
-                System.out.print(i + " ");
+        for (int i = 0; i < multipleOfThree.length; i++) {
+            for (int j = 0; j < multipleOfThree[i].length; j++) {
+                multipleOfThree[i][j] = count;
+                count = count + 3;
+                System.out.print(multipleOfThree[i][j] + " ");
+
             }
             System.out.println();
-
         }
 
+
     }
+
 }
+

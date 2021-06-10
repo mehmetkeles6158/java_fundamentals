@@ -35,8 +35,9 @@ public class Exercise_02 {
             System.out.println("Your Day is Friday");
         } else if (number == 6) {
             System.out.println("Your Day is Saturday");
-        } else {
+        } else if( number==7){
             System.out.println("Your Day is Sunday");
+        } else if (number < 1 && number > 7){
         }
 
     }

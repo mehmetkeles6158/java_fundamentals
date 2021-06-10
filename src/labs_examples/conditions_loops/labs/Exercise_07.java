@@ -27,8 +27,19 @@ public class Exercise_07 {
         // 4) I write completed code here!
 
         int i = 0;
-        while (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
-            System.out.println(i);
+        //while (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+
+        //}
+
+        while(i < str.length()){
+
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+                System.out.println(i);
+                break;
+
+            }
+             else i++;
+
         }
 
     }

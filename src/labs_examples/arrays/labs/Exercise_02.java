@@ -15,16 +15,18 @@ public class Exercise_02 {
 
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
-        Scanner index = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Please enter a number between 1-10 :");
 
         // write code here
 
-        int i = index.nextInt();
+        int i = sc.nextInt();
 
-        i = array[i];
-        array[i] = array.length - 1;
-        System.out.println(i + " is index number of element " + array[i]);
+        for ( int j = 0; j < array.length; j++ ) {
+            if (array[j] == i) {
+                System.out.println("This is current index " + j);
+            }
+        }
 
     }
 

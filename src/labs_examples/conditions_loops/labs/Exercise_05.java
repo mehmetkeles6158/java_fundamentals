@@ -28,6 +28,7 @@ public class Exercise_05 {
 
 
         int sum = 0;
+        double average = 0;
 
         for (int i = lowerBound; i <= upperBound; i++) {
 
@@ -35,6 +36,8 @@ public class Exercise_05 {
 
         }
         System.out.println("Sum is " + sum);
+        average = (double)sum/(upperBound-lowerBound + 1);
+        System.out.println("The average is " + average);
 
     }
 

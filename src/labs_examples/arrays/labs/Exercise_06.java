@@ -18,15 +18,13 @@ public class Exercise_06 {
 
 
         // Question: in the for loop below, why do we divide "nums.length" by 2? (Answer: we should iterate through until mid number. And switch around other numbers.
-        for (int i = 0; i > nums.length / 2; i++) {
+        for (int i = 0; i < nums.length / 2; i++) {
             // swap elements at indexes in array
             // you have two indices readily available for you to use "i" (which increments) and "nums.length"
             // you've also got this "temp" variable you can use to hold a value temporarily
             int temp = nums[i];
             nums[i] = nums[nums.length - i - 1];
             nums[nums.length - i - 1] = temp;
-            System.out.println(temp);
-
 
         }
         System.out.print("Contents of array after for loop - ");
