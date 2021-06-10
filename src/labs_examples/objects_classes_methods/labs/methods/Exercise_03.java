@@ -7,7 +7,7 @@ package labs_examples.objects_classes_methods.labs.methods;
  * it, it should print 120. It should also work for any ther number you pass it.
  *
  */
-public class Exercise_04 {
+public class Exercise_03 {
 
     public static void main(String[] args) {
 
@@ -30,6 +30,7 @@ public class Exercise_04 {
 
 //        int x = factorial(5);
 //        System.out.println(x);
+//        should print 120
     }
 
 
