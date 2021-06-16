@@ -66,7 +66,10 @@ public class MethodTrainingExercise_02<array> {
 //            which is passed in as an argument
 
         int[] someNumbers = new int[]{2, 3, 5, 6, 7};
-        getSmallestAndLargest(someNumbers);
+        int [] givingSmallestLargest = getSmallestAndLargest(someNumbers);
+        System.out.println(" " + givingSmallestLargest[0] + " " + givingSmallestLargest[1]);
+        System.out.println(Arrays.toString(givingSmallestLargest));
+
 
 
         //    7) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.
@@ -171,13 +174,15 @@ public class MethodTrainingExercise_02<array> {
 
         for (int i = 1; i < array.length; i++) {
             if (array[i] < smallest) {
-                smallest = smallArray[i];
+                smallest = array[i];
             } else if (array[i] > largest) {
-                largest = smallArray[i];
+                largest = array[i];
             }
 
         }
-        return array;
+        smallArray[0] = smallest;
+        smallArray[1] = largest;
+        return smallArray;
     }
 
 
@@ -206,7 +211,7 @@ public class MethodTrainingExercise_02<array> {
     public static int[] reverseArray(int[] array) {
 
 
-        for (int i = 0; i < array.length / 2; i++) {
+        for (int i = 1; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - 1 - i];
             array[array.length - 1 - i] = temp;
