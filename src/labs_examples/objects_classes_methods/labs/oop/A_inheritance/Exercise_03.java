@@ -3,7 +3,8 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: because, parent class must exist before child class.(inheritance)
+ *
  *
  */
 

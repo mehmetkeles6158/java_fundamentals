@@ -3,7 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Run the class below and study the output. What prints and why?
  *
- * Your answer:
+ * Your answer: Out come is 10. Because  B class extends A class.( Inheritance. B is a child class of A)
  *
  */
 class A {
