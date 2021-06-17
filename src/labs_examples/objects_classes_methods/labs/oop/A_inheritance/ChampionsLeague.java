@@ -3,7 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 public class ChampionsLeague {
     protected int numberOfPlayers;
     protected boolean teamLogo;
-    protected String stadiumOfName;
+    protected String stadiumName;
 
     public ChampionsLeague() {
     }
@@ -11,7 +11,7 @@ public class ChampionsLeague {
     public ChampionsLeague(int numberOfPlayers, boolean teamLogo, String stadiumOfName) {
         this.numberOfPlayers = numberOfPlayers;
         this.teamLogo = teamLogo;
-        this.stadiumOfName = stadiumOfName;
+        this.stadiumName = stadiumOfName;
     }
 
     public int getNumberOfPlayers() {
@@ -30,11 +30,11 @@ public class ChampionsLeague {
         this.teamLogo = teamLogo;
     }
 
-    public String getStadiumOfName() {
-        return stadiumOfName;
+    public String getStadiumName() {
+        return stadiumName;
     }
 
-    public void setStadiumOfName(String stadiumOfName) {
-        this.stadiumOfName = stadiumOfName;
+    public void setStadiumName(String stadiumName) {
+        this.stadiumName = stadiumName;
     }
 }

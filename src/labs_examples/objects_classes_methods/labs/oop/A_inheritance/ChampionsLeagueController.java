@@ -6,7 +6,7 @@ public class ChampionsLeagueController {
         Besiktas besiktas = new Besiktas(23,true,"Vodafone park",1903);
 
         System.out.println(group_h.getNumbersOfTeams());
-        System.out.println(group_h.stadiumOfName);
+        System.out.println(group_h.stadiumName);
         System.out.println(besiktas.getYearOfFoundation());
     }
 }

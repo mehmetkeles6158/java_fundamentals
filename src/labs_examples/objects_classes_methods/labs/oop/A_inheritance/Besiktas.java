@@ -4,13 +4,10 @@ public class Besiktas extends Group_H {
 
     private int yearOfFoundation;
 
-    public Besiktas(int numbersOfTeams, int yearOfFoundation) {
-        super(numbersOfTeams);
-        this.yearOfFoundation = yearOfFoundation;
-    }
 
     public Besiktas(int numbersOfPlayers, boolean teamLogo, String stadiumOfName, int yearOfFoundation) {
         super(numbersOfPlayers,teamLogo,stadiumOfName,yearOfFoundation);
+        this.yearOfFoundation = yearOfFoundation;
     }
 
     public int getYearOfFoundation() {
