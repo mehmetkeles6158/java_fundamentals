@@ -14,6 +14,10 @@ public class ChampionsLeague {
         this.stadiumName = stadiumOfName;
     }
 
+    public void teamChemistry(int level) {
+        System.out.println("Champions league' teams' chemistry are not too bad! And their average level is " + level + ".");
+    }
+
     public int getNumberOfPlayers() {
         return numberOfPlayers;
     }
