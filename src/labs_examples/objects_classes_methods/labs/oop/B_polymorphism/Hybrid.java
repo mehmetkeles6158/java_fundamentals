@@ -1,6 +1,6 @@
 package labs_examples.objects_classes_methods.labs.oop.B_polymorphism;
 
-public class Hybrid implements Bikes{
+public class Hybrid implements Bikes {
     @Override
     public boolean discBrake() {
         System.out.println("Hybrid Bikes don't have disc brakes!");
