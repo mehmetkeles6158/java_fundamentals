@@ -62,6 +62,7 @@ public class Deck {
             randomIndex = rand.nextInt(52);
         }
         player.hand.cards.add(cards[randomIndex]);
+        player.hand.handValue = player.hand.score();
         usedCards.add(randomIndex);
 
     }

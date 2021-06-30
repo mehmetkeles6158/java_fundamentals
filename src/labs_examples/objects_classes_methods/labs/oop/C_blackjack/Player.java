@@ -16,15 +16,17 @@ public class Player {
         this.hand = new Hand();
     }
 
-//    public boolean computerAI() {
-//        if(hand.handValue < 16){
-//
-//        }
-//        return true;
-//        if(hand.handValue >= 16) {
-//            return false;
-//        }
-//
-//    }
+    public Player(String name) {
+        this.name = name;
+        this.hand = new Hand();
+    }
 
+    public boolean computerAI() {
+        if (hand.handValue < 16) {
+            return true;} else
+        return false;
+
+    }
 }
+
+

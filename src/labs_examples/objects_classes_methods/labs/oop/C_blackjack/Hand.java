@@ -33,4 +33,11 @@ public class Hand {
         } else
             return false;
     }
+
+    public void printHand(){
+        for(Card card: cards){
+            System.out.println(card.toString());
+        }
+
+    }
 }
