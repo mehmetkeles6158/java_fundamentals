@@ -1,6 +1,7 @@
 package labs_examples.exception_handling.labs;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Exception Handling Exercise 5:
@@ -11,17 +12,29 @@ import java.util.Arrays;
 class Example {
 
     public static void main(String[] args) {
-        try {
-            int x = divide(21, 0);
-        } catch (ArithmeticException exc) {
-            System.out.println("an exception was thrown from the divide() method.");
-        }
-        System.out.println("all done");
+
+        System.out.println("Welcome to the School Registration process!!");
+        checkEligibilty(13, 160);
+        System.out.println("Have a good day...");
+
     }
 
+    public static void checkEligibilty(int age, int height) {
 
-    public static int divide(int a, int b) throws ArithmeticException {
-        return a / b;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What is your age?");
+        age = input.nextInt();
+
+        System.out.println("What is your height as metric unit(cm)?");
+        height = input.nextInt();
+
+        if (age > 10 || height > 140) {
+            throw new ArithmeticException("You are not not eligible for registration!");
+
+        } else {
+            System.out.println("Entry is Valid!!");
+        }
     }
 
 }
