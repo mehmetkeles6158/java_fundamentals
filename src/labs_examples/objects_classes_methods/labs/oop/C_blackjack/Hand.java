@@ -34,8 +34,8 @@ public class Hand {
             return false;
     }
 
-    public void printHand(){
-        for(Card card: cards){
+    public void printHand() {
+        for (Card card : cards) {
             System.out.println(card.toString());
         }
 

@@ -33,7 +33,6 @@ public class BlackjackController {
 //this until both the user and the computer say "no" to another card, or until both players hand value is over 21.
 
 
-
 //3) When both players say "no" to another card (or when both players have "busted" (gone over 21)) print out both the users
 //hand and hand value as well as the computers hand and hand value and indicate who won, or whether you both lost.
 
@@ -43,22 +42,24 @@ public class BlackjackController {
 //(that they enter through the console) and the other will be the computer player.
 
 
-
     public void playBlackJack() {
+
+        System.out.println("Welcome to BlackJack Game. Please follow directions to play the game!");
         Player computer = createPlayer(true);
         Player player = createPlayer(false);
 
+        System.out.println("-----ComputerHand-------");
         Deck deck = new Deck();
         deck.deal(computer);
         deck.deal(computer);
         computer.hand.printHand();
 
-        while(computer.computerAI()){
+        while (computer.computerAI()) {
             deck.deal(computer);
             computer.hand.printHand();
         }
 
-        System.out.println("---------------------------------------------------");
+        System.out.println("------------------------");
 
         deck.deal(player);
         deck.deal(player);
@@ -67,7 +68,7 @@ public class BlackjackController {
         Scanner newCard = new Scanner(System.in);
         System.out.println("Do you need a new card?");
         String playerNewCard = newCard.next();
-        while(playerNewCard.equals("yes") && player.hand.handValue < 21) {
+        while (playerNewCard.equals("yes") && player.hand.handValue < 21) {
             deck.deal(player);
             player.hand.printHand();
             System.out.println("Do you need a new card?");
@@ -76,25 +77,31 @@ public class BlackjackController {
 
         //3) When both players say "no" to another card (or when both players have "busted" (gone over 21)) print out both the users
 //hand and hand value as well as the computers hand and hand value and indicate who won, or whether you both lost.
-//
-//        if ( player.hand.handValue > 21 && computer.hand.handValue > 21){
-//            System.out.println("Both players just lost");
-//        } else if(player.hand.handValue <= 21 && )
+
+        if (player.hand.handValue > 21 && computer.hand.handValue > 21) {
+            System.out.println("You busted!");
+        } else if (player.hand.handValue <= 21 && player.hand.handValue > computer.hand.handValue) {
+            System.out.println("You won!");
+        } else if (computer.hand.handValue <= 21 && computer.hand.handValue > player.hand.handValue) {
+            System.out.println("Computer won! You lost!");
+        } else if (player.hand.handValue <= 21 && player.hand.handValue == computer.hand.handValue) {
+            System.out.println("It is a draw!");
+        }
 
     }
 
-    public Player createPlayer(boolean dealer){
-         Player player;
+    public Player createPlayer(boolean dealer) {
+        Player player;
 
-        if(dealer) {
-            player  = new Player("computerPlayer");
+        if (dealer) {
+            player = new Player("computerPlayer");
         } else {
             Scanner input = new Scanner(System.in);
-            System.out.println("Enter your name: ");
+            System.out.println("Please enter your name: ");
             String name = input.next();
-            System.out.println("Enter your pot value: ");
+            System.out.println("Please enter your pot value: ");
             int potValue = input.nextInt();
-            player = new Player(name,potValue);
+            player = new Player(name, potValue);
 
 
         }

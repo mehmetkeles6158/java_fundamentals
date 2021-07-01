@@ -23,8 +23,9 @@ public class Player {
 
     public boolean computerAI() {
         if (hand.handValue < 16) {
-            return true;} else
-        return false;
+            return true;
+        } else
+            return false;
 
     }
 }

@@ -6,7 +6,7 @@ public class Card {
 
 
     char[] suits = new char[]{'♠', '♦', '♥', '♣'};
-    char [] ranks = new char[]{'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
+    char[] ranks = new char[]{'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
     int suit;
     int cardValue;
 
@@ -19,7 +19,7 @@ public class Card {
     public String toString() {
         return "Card{" +
                 "suit=" + suits[suit] +
-                ", cardValue=" + ranks[cardValue-1] +
+                ", cardValue=" + ranks[cardValue - 1] +
                 '}';
     }
 

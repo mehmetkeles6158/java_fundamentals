@@ -11,7 +11,6 @@ public class Deck {
 //(spades, hearts, diamonds, clubs), four 3's (spades, hearts, diamonds, clubs), ... up through Jacks, Queens and Kings
 
 
-
 //Card[] cards = new Card[52];
 //ArrayList<Integer> used = new ArrayList<>();
 //Deck deck = new Deck(cards, used);
@@ -30,7 +29,6 @@ public class Deck {
         createFullDeck();
 
     }
-
 
 
     public void createFullDeck() {
@@ -53,12 +51,12 @@ public class Deck {
 //called usedCards in the Deck class. This usedCards arraylist tracks the cards that have already been dealt.
 
 
-    public void deal(Player player){
+    public void deal(Player player) {
 
         Random rand = new Random();
         int randomIndex = rand.nextInt(52);
 
-        while(usedCards.contains(randomIndex)){
+        while (usedCards.contains(randomIndex)) {
             randomIndex = rand.nextInt(52);
         }
         player.hand.cards.add(cards[randomIndex]);
