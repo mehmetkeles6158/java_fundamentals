@@ -2,7 +2,7 @@ package labs_examples.input_output.labs;
 
 import java.io.*;
 
-public class Example_02_Other {
+public class Exercise_02_Other {
     public static void main(String[] args) throws IOException {
         BufferedInputStream in = null;
         BufferedOutputStream out = null;
