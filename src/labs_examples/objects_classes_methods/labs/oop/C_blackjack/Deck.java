@@ -34,7 +34,7 @@ public class Deck {
     public void createFullDeck() {
         int index = 0;
         for (int suit = 0; suit <= 3; suit++) {
-            for (int value = 1; value <= 13; value++) {
+            for (int value = 0; value <= 12; value++) {
                 cards[index] = new Card(suit, value);
                 index++;
                 numOfCards++;

@@ -8,7 +8,7 @@ public class FileReaderAndBufferExample
 {
     public static void main(String[] args)
     {
-        String filePath = "src/labs_examples/input_output/files/char_data.txt";
+        String filePath = "/src/labs_examples/input_output/files/char_data.txt";
 
         try {
             readCharacterByCharacter(filePath);
@@ -30,7 +30,6 @@ public class FileReaderAndBufferExample
                 new FileReader(filePath);
 
         int i;
-
 
         while ((i=fr.read()) != -1)
             System.out.print((char) i);

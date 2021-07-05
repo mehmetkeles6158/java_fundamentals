@@ -7,20 +7,18 @@ public class Card {
 
     char[] suits = new char[]{'♠', '♦', '♥', '♣'};
     char[] ranks = new char[]{'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
-    int suit;
-    int cardValue;
+    char suit;
+    char cardValue;
 
     public Card(int suit, int cardValue) {
-        this.suit = suit;
-        this.cardValue = cardValue;
+        this.suit = suits[suit];
+        this.cardValue = ranks[cardValue];
     }
 
     @Override
     public String toString() {
-        return "Card{" +
-                "suit=" + suits[suit] +
-                ", cardValue=" + ranks[cardValue - 1] +
-                '}';
+        String s = cardValue + "" + suit;
+        return s;
     }
 
     public int getValue() {

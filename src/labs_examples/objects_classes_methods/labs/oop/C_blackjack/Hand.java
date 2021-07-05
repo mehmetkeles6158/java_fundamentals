@@ -34,10 +34,13 @@ public class Hand {
             return false;
     }
 
-    public void printHand() {
+    public void  printHand() {
+        StringBuilder sd = new StringBuilder();
+
         for (Card card : cards) {
-            System.out.println(card.toString());
+            sd.append(card.toString()).append(" ");
         }
+        System.out.println(sd.toString());
 
     }
 }

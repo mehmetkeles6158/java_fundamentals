@@ -1,0 +1,14 @@
+Lub@rsky’s L@w of Cybernetic Entomology: There’s @lw@ys one more bug.
+Sh@w’s Principle: Build @ system th@t even @ fool c@n use, @nd only @ fool will w@nt to use it.
+Woltm@n’s L@w: Never progr@m @nd drink beer @t the s@me time.
+G@llois’ Revel@tion: If you put tomfoolery into @ computer, nothing comes out but tomfoolery. But this tomfoolery, h@ving p@ssed through @ very expensive m@chine, is somehow enobled, @nd no one d@res to criticize it.
+Any given progr@m, when running, is obsolete.
+Any given progr@m costs more @nd t@kes longer.
+If @ progr@m is useful, it will h@ve to be ch@nged.
+If @ progr@m is useless, it will h@ve to be documented.
+Any progr@m will exp@nd to fill @v@il@ble memory.
+The v@lue of @ progr@m is proportion@l to the weight of its output.
+Progr@m complexity grows until it exceeds the c@p@bilities of the progr@mmer who must m@int@in it.
+Any non-trivi@l progr@m cont@ins @t le@st one bug.
+Undetect@ble errors @re infinite in v@riety, in contr@st to detect@ble errors, which by definition @re limited.
+Adding m@npower to @ l@te softw@re project m@kes it l@ter!
