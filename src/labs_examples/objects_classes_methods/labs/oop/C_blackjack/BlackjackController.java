@@ -52,25 +52,25 @@ public class BlackjackController {
         Deck deck = new Deck();
         deck.deal(computer);
         deck.deal(computer);
-        computer.hand.printHand();
+        computer.hand.printHand(false);
 
         while (computer.computerAI()) {
             deck.deal(computer);
-            computer.hand.printHand();
+            computer.hand.printHand(false);
         }
 
         System.out.println("------------------------");
 
         deck.deal(player);
         deck.deal(player);
-        player.hand.printHand();
+        player.hand.printHand(true);
 
         Scanner newCard = new Scanner(System.in);
         System.out.println("Do you need a new card?");
         String playerNewCard = newCard.next();
         while (playerNewCard.equals("yes") && player.hand.handValue < 21) {
             deck.deal(player);
-            player.hand.printHand();
+            player.hand.printHand(true);
             System.out.println("Do you need a new card?");
             playerNewCard = newCard.next();
         }
@@ -86,6 +86,8 @@ public class BlackjackController {
             System.out.println("Computer won! You lost!");
         } else if (player.hand.handValue <= 21 && player.hand.handValue == computer.hand.handValue) {
             System.out.println("It is a draw!");
+        } else {
+            System.out.println("unhandled condition!");
         }
 
     }

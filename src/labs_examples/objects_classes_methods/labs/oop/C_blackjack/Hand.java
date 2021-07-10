@@ -15,10 +15,11 @@ public class Hand {
         int currentScore = 0;
 
         for (Card card : this.cards) {
-            if (card.cardValue > 10) {
-                currentScore += 10;
-            } else
-                currentScore += card.cardValue;
+            if (card.cardValue == 'A') {
+                currentScore += 1;
+            } else if (card.cardValue == '2')
+                currentScore += 2;
+            currentScore += card.cardValue;
 
         }
         return currentScore;
@@ -34,13 +35,22 @@ public class Hand {
             return false;
     }
 
-    public void  printHand() {
-        StringBuilder sd = new StringBuilder();
+    public void printHand(boolean Player) {
 
-        for (Card card : cards) {
-            sd.append(card.toString()).append(" ");
+        StringBuilder sd = new StringBuilder();
+        if (Player) {
+
+            for (Card card : cards) {
+                sd.append(card.toString()).append(" ");
+            }
+            System.out.println(sd.toString());
+
+        } else {
+            sd.append(cards.get(0).toString()).append(" ");
+            System.out.println(sd.toString());
+
         }
-        System.out.println(sd.toString());
 
     }
+
 }

@@ -31,24 +31,15 @@ public class Exercise_02 {
 
             while ((l = inputStream.readLine()) != null) {
 
-                outputStream.println(l);
+
+                outputStream.println(l.replace("a", "@"));
+
+
             }
+
         } catch (IOException exc) {
             System.out.println("An error occurred: " + exc.getMessage());
 
-            int ch = 0;
-            while (true) {
-                try {
-                    if ((ch = inputStream.read()) == -1)
-                        break;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                if (ch == 'a')
-                    ch = '@';
-
-                outputStream.write(ch);
-            }
         } finally {
             // close connections
             try {
@@ -59,6 +50,11 @@ public class Exercise_02 {
             outputStream.close();
 
         }
+
     }
 
+
 }
+
+
+
