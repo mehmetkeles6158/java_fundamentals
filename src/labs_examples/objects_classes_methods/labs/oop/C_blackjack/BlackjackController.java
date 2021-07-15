@@ -54,10 +54,6 @@ public class BlackjackController {
         deck.deal(computer);
         computer.hand.printHand(false);
 
-        while (computer.computerAI()) {
-            deck.deal(computer);
-            computer.hand.printHand(false);
-        }
 
         System.out.println("------------------------");
 
@@ -75,18 +71,28 @@ public class BlackjackController {
             playerNewCard = newCard.next();
         }
 
+        while (computer.computerAI()) {
+            deck.deal(computer);
+            computer.hand.printHand(true);
+        }
+
         //3) When both players say "no" to another card (or when both players have "busted" (gone over 21)) print out both the users
 //hand and hand value as well as the computers hand and hand value and indicate who won, or whether you both lost.
 
         if (player.hand.handValue > 21 && computer.hand.handValue > 21) {
             System.out.println("You busted!");
         } else if (player.hand.handValue <= 21 && player.hand.handValue > computer.hand.handValue) {
-            System.out.println("You won!");
+            System.out.println("Congrats!You won!");
         } else if (computer.hand.handValue <= 21 && computer.hand.handValue > player.hand.handValue) {
-            System.out.println("Computer won! You lost!");
+            System.out.println("Unfortunately.You lost!");
         } else if (player.hand.handValue <= 21 && player.hand.handValue == computer.hand.handValue) {
             System.out.println("It is a draw!");
-        } else {
+        } else if (player.hand.handValue <= 21 && computer.hand.handValue > 21) {
+            System.out.println("Congrats!You won!");
+        }else if (computer.hand.handValue <= 21 && player.hand.handValue > 21) {
+            System.out.println("Unfortunately.You lost!");
+        }
+        else {
             System.out.println("unhandled condition!");
         }
 
