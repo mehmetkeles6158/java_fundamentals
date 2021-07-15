@@ -46,20 +46,47 @@ class SyncExample {
 
 
         S1.start();
-        S5.start();
-        S4.start();
-        S3.start();
-        S2.start();
-
         try {
+            System.out.println("Current Thread: " + Thread.currentThread().getName());
             S1.join();
-            S2.join();
-            S3.join();
-            S4.join();
-            S5.join();
-        } catch (Exception e) {
-            System.out.println("Interrupted!");
+        } catch (Exception ex) {
+            System.out.println("Exception has been caught" + ex);
         }
+
+        S2.start();
+        try {
+            System.out.println("Current Thread: " + Thread.currentThread().getName());
+            S2.join();
+        } catch (Exception ex) {
+            System.out.println("Exception has been caught" + ex);
+        }
+
+        S3.start();
+        try {
+            System.out.println("Current Thread: " + Thread.currentThread().getName());
+            S3.join();
+        } catch (Exception ex) {
+            System.out.println("Exception has been caught" + ex);
+        }
+
+        S4.start();
+        try {
+            System.out.println("Current Thread: " + Thread.currentThread().getName());
+            S4.join();
+        } catch (Exception ex) {
+            System.out.println("Exception has been caught" + ex);
+        }
+
+
+        S5.start();
+        try {
+            System.out.println("Current Thread: " + Thread.currentThread().getName());
+            S5.join();
+        } catch (Exception ex) {
+            System.out.println("Exception has been caught" + ex);
+        }
+
+
     }
 }
 

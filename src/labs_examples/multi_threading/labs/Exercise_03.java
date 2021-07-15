@@ -29,9 +29,18 @@ public class Exercise_03 {
             Multithreading01 obj03 = new Multithreading01();
 
 
+
+
+
+
             obj01.setPriority(2);
+            obj01.start();
             obj02.setPriority(5);
+            obj02.start();
             obj03.setPriority(8);
+            obj03.start();
+
+
 
             System.out.println("obj01 thread priority : "
                     + obj01.getPriority());
