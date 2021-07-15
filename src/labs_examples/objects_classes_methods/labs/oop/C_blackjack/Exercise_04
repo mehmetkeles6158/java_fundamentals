@@ -4,3 +4,40 @@ both an initial sum of "money" and let them play with it. Take actual bets. If e
 Consistently print out the current amount of money both the user and computer have after each game.
 
 Any additional features you'd like to add? Go for it!
+
+
+
+// int money;          // Amount of money the user has.
+        int bet;            // Amount user bets on a game.
+        boolean userWins;   // Did the user win the game?
+
+
+        money = 100;  // User starts with $100.
+
+        while (true) {
+            System.out.println("You have " + money + " dollars.");
+            do {
+               System.out.println("How many dollars do you want to bet?  (Enter 0 to end.)");
+               System.out.print("? ");
+               bet = TextIO.getlnInt();
+               if (bet < 0 || bet > money)
+                   System.out.println("Your answer must be between 0 and " + money + '.');
+            } while (bet < 0 || bet > money);
+            if (bet == 0)
+               break;
+            userWins = playBlackjack();
+            if (userWins)
+               money = money + bet;
+            else
+               money = money - bet;
+            System.out.println();
+            if (money == 0) {
+               System.out.println("Looks like you've run out of money!");
+               break;
+            }
+        }
+
+        System.out.println();
+        System.out.println("You leave with $" + money + '.');
+
+     } // end main()
