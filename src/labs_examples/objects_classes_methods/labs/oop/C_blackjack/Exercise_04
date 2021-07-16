@@ -6,6 +6,7 @@ Consistently print out the current amount of money both the user and computer ha
 Any additional features you'd like to add? Go for it!
 
 
+//Example for for exercise-4
 
 // int money;          // Amount of money the user has.
         int bet;            // Amount user bets on a game.

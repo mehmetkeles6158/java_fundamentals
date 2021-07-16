@@ -45,6 +45,7 @@ public class BlackjackController {
     public void playBlackJack() {
 
         System.out.println("Welcome to BlackJack Game. Please follow directions to play the game!");
+        System.out.println();
 
         Player computer = createPlayer(true);
         Player player = createPlayer(false);
@@ -55,13 +56,33 @@ public class BlackjackController {
         deck.deal(computer);
         computer.hand.printHand(false);
 
-
+        System.out.println();
         System.out.println("------YourHand----------");
 
         deck.deal(player);
         deck.deal(player);
         player.hand.printHand(true);
 
+
+
+        System.out.println("------ComputerFinalHand-------");
+
+        while (computer.computerAI()) {
+            deck.deal(computer);
+            computer.hand.printHand(true);
+        }
+
+        //3) When both players say "no" to another card (or when both players have "busted" (gone over 21)) print out both the users
+//hand and hand value as well as the computers hand and hand value and indicate who won, or whether you both lost.
+
+        winLose(player,computer);
+
+        userNextCards(player,deck);
+
+
+    }
+
+    public void userNextCards(Player player, Deck deck){
         Scanner newCard = new Scanner(System.in);
         System.out.println("Do you need a new card?");
         String playerNewCard = newCard.next();
@@ -77,17 +98,9 @@ public class BlackjackController {
             }
 
         }
+    }
 
-        System.out.println("------ComputerFinalHand-------");
-
-        while (computer.computerAI()) {
-            deck.deal(computer);
-            computer.hand.printHand(true);
-        }
-
-        //3) When both players say "no" to another card (or when both players have "busted" (gone over 21)) print out both the users
-//hand and hand value as well as the computers hand and hand value and indicate who won, or whether you both lost.
-
+    public void winLose(Player player, Player computer){
         if (player.hand.handValue > 21 && computer.hand.handValue > 21) {
             System.out.println("You busted!");
         } else if (player.hand.handValue <= 21 && player.hand.handValue > computer.hand.handValue) {
@@ -103,7 +116,6 @@ public class BlackjackController {
         } else {
             System.out.println("unhandled condition!");
         }
-
     }
 
     public Player createPlayer(boolean dealer) {
