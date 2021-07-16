@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static labs_examples.generics.labs.Sum.sumMethod;
 
@@ -60,6 +61,20 @@ class Sum {
 }
 
 //2) Write a generic method to count the number of elements in a "Collection" of Strings that are palindromes(still working on it)
+
+class Palindromes{
+
+    public static boolean checkingPalindrome(String word) {
+        for (int i = 0; i < word.length() / 2; i++) {
+            if (word.charAt(i) == word.charAt(word.length() - 1 - i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
 
 
 //3) Write a generic method to exchange the positions of two different elements in an array.
