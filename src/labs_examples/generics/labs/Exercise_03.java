@@ -31,6 +31,13 @@ public class Exercise_03 {
         Sum.sumMethod(15.3, 20);
         System.out.println();
 
+
+        String [] words = {"", "a", "aa", "ab", "aba", "read", "reader", "radar", "comic","carat"};
+        for (String word: words){
+            System.out.println(Palindromes.checkingPalindrome(word));
+        }
+        System.out.println();
+
 // 3) Write a generic method to exchange the positions of two different elements in an array.
         Integer[] someElements = {11, 22, 33, 44, 55, 66, 77, 88};
         Exchange.change(someElements, 1, 4);
@@ -66,11 +73,11 @@ class Palindromes{
 
     public static boolean checkingPalindrome(String word) {
         for (int i = 0; i < word.length() / 2; i++) {
-            if (word.charAt(i) == word.charAt(word.length() - 1 - i)) {
-                return true;
+            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
 
