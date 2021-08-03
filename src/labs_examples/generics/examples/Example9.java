@@ -40,5 +40,7 @@ class GenericMethodDemo {
         // are not of the same type.
 //    if(arraysEqual(nums, dvals))
 //      System.out.println("nums equals dvals");
+
+
     }
 }
