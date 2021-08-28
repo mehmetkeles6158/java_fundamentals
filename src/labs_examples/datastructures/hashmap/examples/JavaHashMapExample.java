@@ -31,6 +31,7 @@ public class JavaHashMapExample {
 
 
 
+
         // demonstrate "getting" an element out of the HashMap
         Person example = peopleMap.get("caden@codingnomads.co");
 
@@ -94,4 +95,5 @@ class Person {
                 ", email='" + email + '\'' +
                 '}';
     }
+
 }

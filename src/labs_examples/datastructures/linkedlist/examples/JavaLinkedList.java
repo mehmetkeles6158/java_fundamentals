@@ -71,5 +71,7 @@ public class JavaLinkedList {
 
         // there are many more methods for you to work with in the LinkedList class
         // explore your options to see what else you can do!
+
+        words.peekLast();
     }
 }

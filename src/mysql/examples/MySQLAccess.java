@@ -65,7 +65,7 @@ public class MySQLAccess {
                     .prepareStatement("SELECT * from University.courses");
             resultSet = preparedStatement.executeQuery();
 
-            //writeResultSet(resultSet);
+            writeResultSet(resultSet);
 
 
 
