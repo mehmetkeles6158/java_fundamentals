@@ -4,48 +4,26 @@ import java.util.Arrays;
 
 public class MyExample {
 
-    public int[] bubbleSort(int[] arr) {
-        int n = arr.length;
+    public static int[] selectionSort(int nums[]){
+        for(int i = 0; i < nums.length; i++){
+            int minVal = i;
 
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+            for(int j  = i + 1; j < nums.length; j++){
+                if(nums[j] < nums[minVal]) {
+                    minVal =j;
                 }
+                int temp = nums[minVal];
+                nums[minVal] = nums[i];
+                nums[i] = temp;
             }
-        }
-        return arr;
-    }
-
-    public static int[] insertionSort(int nums[]) {
-
-        for (int i = 1; i < nums.length; ++i) {
-
-            int val = nums[i];
-            int j = i - 1;
-
-            while (j >= 0 && nums[j] > val) {
-
-                nums[j + 1] = nums[j];
-
-                j--;
-            }
-            nums[j + 1] = val;
         }
         return nums;
     }
 
-
     public static void main(String[] args) {
-        int[] nums01 = {3, 5, 2, 1, 4};
+        int [] nums = {23,17,16,12,1,5,37};
 
-//        MyExample obj1 = new MyExample();
-//        System.out.println(Arrays.toString(obj1.bubbleSort(nums01)));
-
-        System.out.println(Arrays.toString(insertionSort(nums01)));
-
+        System.out.println(Arrays.toString(selectionSort(nums)));
     }
 
 }
